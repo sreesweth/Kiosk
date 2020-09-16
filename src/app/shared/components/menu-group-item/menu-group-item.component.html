@@ -1,0 +1,44 @@
+<div class="border border-gray shadow-sm rounded-lg m-2">
+    <a fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill class="menu-group-item"
+        [ngClass]="{'border-left border-danger border-width-3': isSelected, 
+                    'rounded-left': isSelected && groupInfo.type === 'main', 
+                    'rounded-top-left': isFirst,
+                    ' rounded-bottom-left': isLast}"
+        (click)="onSelection()">
+        <div fxFlex="40" fxLayoutAlign="center space-between">
+            <div>
+                <img class="menu-group-img" src="{{'assets/images/mcDonalds/' + groupInfo.image}}" alt="">
+            </div>
+        </div>
+        <div fxFlex="60" fxLayoutAlign="start space-between">
+            <div class="menu-group-label" [ngClass]="{'font-weight-bolder': isSelected}">
+                {{groupInfo.label}}
+            </div>
+        </div>
+    </a>
+</div>
+<!-- <div fxLayout="column" fxLayoutAlign="space-between center">
+
+    <div fxFlex="80" fxLayoutAlign="center space-between"
+        class="border border-gray shadow-sm rounded-lg m-2 vertical-card" 
+        [ngClass]="{'selected': isSelected}">
+        <a fxLayout="column" fxLayoutAlign="space-between center" 
+            class="menu-group-item vertical-card" 
+            [ngClass]="{'border-left border-danger border-width-2': isSelected, 
+                'rounded-left': isSelected && groupInfo.type === 'main', 
+                'rounded-top-left': isFirst,
+                ' rounded-bottom-left': isLast}" (click)="onSelection()">
+            <div fxFlex="80" fxLayoutAlign="center space-between">
+                <div>
+                    <img class="menu-group-img" src="{{'assets/images/mcDonalds/' + groupInfo.image}}" alt="">
+                </div>
+            </div>
+            <div fxFlex="20" fxLayoutAlign="start space-between">
+                <div class="menu-group-label" [ngClass]="{'font-weight-bolder': isSelected}">
+                    {{groupInfo.label}}
+                </div>
+            </div>
+        </a>
+    </div>
+
+</div> -->

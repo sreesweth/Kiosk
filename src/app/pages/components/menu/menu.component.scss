@@ -1,0 +1,15 @@
+.mat-grid-tile .mat-grid-tile-footer {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    overflow: hidden;
+    padding: 0 16px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 16px;;
+    color: #010101;
+    background-color: #ffffff;
+    place-content: center space-around;
+}

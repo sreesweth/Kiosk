@@ -1,0 +1,131 @@
+@import './reboots';
+@import './utilities';
+@import '~@angular/material/theming';
+@import './component-themes';
+
+
+@include mat-core();
+
+//  mat-palette($base-palette, $default: 500, $lighter: 100, $darker: 700, $text: $default)
+
+$primary: mat-palette($mat-indigo);
+$accent:  mat-palette($mat-pink, A200, A100, A400);
+$warn:    mat-palette($mat-red);
+$theme:   mat-light-theme($primary, $accent, $warn);
+$dark-theme:   mat-dark-theme($primary, $accent, $warn);
+
+$deeppurple-amber-primary: mat-palette($mat-deep-purple);
+$deeppurple-amber-accent:  mat-palette($mat-amber);
+$deeppurple-amber-warn:    mat-palette($mat-red);
+$deeppurple-amber-theme:   mat-light-theme(
+                                $deeppurple-amber-primary, 
+                                $deeppurple-amber-accent, 
+                                $deeppurple-amber-warn);
+$dark-deeppurple-amber-theme:    mat-dark-theme(
+                                    $deeppurple-amber-primary, 
+                                    $deeppurple-amber-accent, 
+                                    $deeppurple-amber-warn);
+
+$pink-bluegrey-primary: mat-palette($mat-pink);
+$pink-bluegrey-accent:  mat-palette($mat-blue-gray);
+$pink-bluegrey-warn:    mat-palette($mat-red);
+$pink-bluegrey-theme:   mat-light-theme(
+                                    $pink-bluegrey-primary, 
+                                    $pink-bluegrey-accent, 
+                                    $pink-bluegrey-warn);
+$dark-pink-bluegrey-theme:   mat-dark-theme(
+                                        $pink-bluegrey-primary, 
+                                        $pink-bluegrey-accent, 
+                                        $pink-bluegrey-warn);
+                
+$purple-green-primary: mat-palette($mat-purple);
+$purple-green-accent:  mat-palette($mat-green);
+$purple-green-warn:    mat-palette($mat-red);
+$purple-green-theme:   mat-light-theme(
+                                $purple-green-primary, 
+                                $purple-green-accent, 
+                                $purple-green-warn);
+
+$dark-purple-green-theme:   mat-dark-theme(
+                                    $purple-green-primary, 
+                                    $purple-green-accent, 
+                                    $purple-green-warn);
+
+$dark-primary: mat-palette($mat-yellow);
+$dark-accent:  mat-palette($mat-amber, A400, A100, A700);
+$dark-warn:    mat-palette($mat-red);
+$dark-alternate-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+// mat-palette($base-palette, $default: 500, $lighter: 100, $darker: 700, $text: $default)
+
+$grey-pink-primary: mat-palette($mat-blue-grey);
+$grey-pink-accent:  mat-palette($mat-pink);
+$grey-pink-warn:    mat-palette($mat-red);
+$grey-pink-theme:   mat-light-theme(
+                                $grey-pink-primary, 
+                                $grey-pink-accent, 
+                                $grey-pink-warn);
+$dark-grey-pink-theme:   mat-dark-theme(
+                                $grey-pink-primary, 
+                                $grey-pink-accent, 
+                                $grey-pink-warn);
+
+// .default-theme {
+    @include angular-material-theme($theme);
+    @include component-themes($theme);
+// }
+
+
+.deeppurple-amber {
+    @include angular-material-theme($deeppurple-amber-theme);
+    @include component-themes($deeppurple-amber-theme);
+}
+
+.pink-bluegrey {
+   
+    @include angular-material-theme($pink-bluegrey-theme);
+    @include component-themes($pink-bluegrey-theme);
+}
+
+.purple-green {
+    
+    @include angular-material-theme($purple-green-theme);
+    @include component-themes($purple-green-theme);
+}
+
+.grey-pink {
+    @include angular-material-theme($grey-pink-theme);
+    @include component-themes($grey-pink-theme);
+}
+// ------------------------------ Dark Themes-----------------------------------------------------
+.dark-deeppurple-amber {
+    @include angular-material-theme($dark-deeppurple-amber-theme);
+    @include component-themes($dark-deeppurple-amber-theme);
+}
+
+.dark-pink-bluegrey {
+   
+    @include angular-material-theme($dark-pink-bluegrey-theme);
+    @include component-themes($dark-pink-bluegrey-theme);
+}
+
+.dark-purple-green {
+    @include angular-material-theme($dark-purple-green-theme);
+    @include component-themes($dark-purple-green-theme);
+}
+.dark-grey-pink {
+    @include angular-material-theme($dark-grey-pink-theme);
+    @include component-themes($dark-grey-pink-theme);
+}
+
+.dark-theme {
+    
+    @include angular-material-theme($dark-theme);
+    @include component-themes($dark-theme);
+}
+
+.dark-alternate-theme {
+    
+    @include angular-material-theme($dark-alternate-theme);
+    @include component-themes($dark-alternate-theme);
+}

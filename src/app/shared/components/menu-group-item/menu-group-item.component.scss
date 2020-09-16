@@ -1,0 +1,47 @@
+.menu-group-item {
+  cursor: pointer;
+
+  :hover {
+    text-decoration: none;
+  }
+
+  .menu-group-img {
+    transition: transform .5s ease;
+    height: 6rem;
+    width: 6rem;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .menu-group-label {
+    font-size: 16px;
+    color: #010101;
+  }
+}
+
+.vertical-card {
+  width: 10rem !important;
+  height: 10rem !important;
+
+  .menu-group-img {
+    height: 7rem;
+    width: 7rem;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .menu-group-label {
+    text-align: center !important;
+    position: relative;
+    top: -10px;
+  }
+}
+.vertical-card.selected {
+
+  .menu-group-img {
+    transform: scale(1.2);
+  }
+  .menu-group-label {
+    font-weight: bolder;
+  }
+}

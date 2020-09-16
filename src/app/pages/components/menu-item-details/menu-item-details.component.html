@@ -1,0 +1,21 @@
+<div *ngIf="selectedItem">
+    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="space-between start" fxLayoutAlign.lt-md="start stretch"
+        fxFlexFill [ngClass]="{'mt-4': screenSize === 'LG' || screenSize === 'XL', 
+                    'mt-3': screenSize === 'MD', 
+                    'mt-2': screenSize === 'SM', 
+                    'mt-1': screenSize === 'XS'}">
+        <div fxFlex="60" fxFlex.xs="40" fxFlexFill>
+            <div class="title-4 mt-5 mb-2 text-center" fxShow fxHide.gt-xs>{{selectedItem.label}}</div>
+            <div class="sub-title-3 mt-5 mb-5 text-center" fxShow fxHide.gt-xs>{{selectedItem.Calories}}</div>
+            <img class="w-100 h-100" src="assets//images/mcDonalds/details/{{selectedItem.image}}">
+        </div>
+        <div fxFlex="40" fxFlex.xs="60" fxFlexFill fxLayoutAlign.lt-sm="center start" [ngClass]="{'mr-5': screenSize === 'LG' || screenSize === 'XL', 
+                    'mr-4': screenSize === 'MD', 
+                    'mr-3': screenSize === 'SM'}">
+            <div class="title-4 mt-5 mb-2" fxShow fxHide.lt-sm>{{selectedItem.label}}</div>
+            <div class="sub-title-3 mt-5 mb-2" fxShow fxHide.lt-sm>{{selectedItem.Calories}}</div>
+            <p class="text-2 mt-4 mb-2" [ngClass]="{'text-center p-4':  screenSize === 'XS'}">
+                {{selectedItem.description}}</p>
+        </div>
+    </div>
+</div>

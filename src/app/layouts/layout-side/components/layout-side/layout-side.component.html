@@ -1,0 +1,34 @@
+<div fxLayout="column" fxLayoutAlign="space-between start" fxFlexFill>
+	<div fxFlex="10"  fxFlexFill>
+		<app-header></app-header>
+	</div>
+	<div fxFlex="80"  fxFlexFill>
+		<!-- <router-outlet></router-outlet> -->
+			<!-- <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-between start" class="h-100">
+				<div fxFlex="30" fxFlex.md="25"  fxFlex.xs="30"  class="h-100 overflow-auto">
+					<app-sidebar></app-sidebar>
+				</div>
+				<div fxFlex="70" fxFlex.md="75"  fxFlex.xs="70" class="h-100 w-100 overflow-auto">
+					<router-outlet></router-outlet>
+				</div>
+			</div> -->
+			<!-- <div class="container"> -->
+				<div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-between start" fxLayoutAlign.lt-md="start stretch" fxFlexFill>
+					<div fxFlex="30" fxFlexOrder="2"  fxFlex.sm="25" fxFlex.xs="30"  fxFlexFill >
+						<div class="overflow-auto h-100">
+							<app-sidebar></app-sidebar>
+						</div>
+					</div>
+					<div fxFlex="70" fxFlexOrder="1"  fxFlex.md="75" fxFlex.xs="70" fxFlexFill>
+						<div class="overflow-auto h-100">
+							<router-outlet></router-outlet> 
+						</div>
+						
+					</div>
+				</div>
+			<!-- </div> -->
+	</div>
+	<div fxFlex="10" fxFlexFill >
+		<app-footer></app-footer>
+	</div>
+</div>

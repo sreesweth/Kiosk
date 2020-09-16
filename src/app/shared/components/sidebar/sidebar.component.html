@@ -1,0 +1,44 @@
+<div *ngIf="menuGroups && menuGroups.length > 0">
+	<div fxShow fxHide.lt-md class="h-100 m-3">
+		<nav fxLayout="column" fxLayoutAlign="space-between center"
+			*ngIf="mainMenuGroup">
+			<div fxLayoutAlign="center space-between" fxFlexFill>
+				<app-menu-group-item [groupInfo]="mainMenuGroup" [isSelected]="checkSelected(mainMenuGroup)"
+					(onSelect)="onGroupSelect($event)" class="w-100">
+				</app-menu-group-item>
+			</div>
+		</nav>
+		<nav fxLayout="column" fxLayoutAlign="space-between center">
+			<div fxLayoutAlign="center space-between"
+				*ngFor="let item of menuGroups; let first = first; let last = last;" fxFlexFill>
+				<app-menu-group-item [isFirst]="first" [isLast]="last" [isSelected]="checkSelected(item)"
+					[groupInfo]="item" (onSelect)="onGroupSelect($event)" class="w-100">
+				</app-menu-group-item>
+			</div>
+		</nav>
+	</div>
+	<div fxShow fxHide.gt-sm>
+		<nav fxLayout="colum" class="overflow-auto w-100 ml-3" fxLayoutAlign="space-between start"
+			fxLayoutAlign.lt-md="start stretch">
+			<!-- <div> -->
+				<div fxLayout="row" fxFlexFill fxLayoutAlign="space-between start" fxLayoutAlign.lt-md="start stretch" class="slider">
+					<div *ngFor="let item of menuGroups;" class="slide">
+						<a (click)="onGroupSelect(item)">
+							<div class="slide" fxLayoutAlign="start start">
+								<div class="menu-grid-cell mat-elevation-z2"
+									[ngClass]="{'selected': checkSelected(item)}">
+									<div class="menu-grid-zoom menu-grid-zoom-image">
+										<img src="{{'assets/images/mcDonalds/' + item.image}}" [alt]="item.label">
+									</div>
+									<div class="img-hover-zoom-title">
+										{{item.label}}
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			<!-- </div> -->
+		</nav>
+	</div>
+</div>

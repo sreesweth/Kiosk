@@ -1,0 +1,6 @@
+// @import '../app/dashboard/tile/tile.component';
+@import '../app/shared/components/tile/tile.component';
+
+@mixin component-themes($theme) {
+  @include tile-theme($theme);
+}

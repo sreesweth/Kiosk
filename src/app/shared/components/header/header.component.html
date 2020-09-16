@@ -1,0 +1,46 @@
+<header>
+	<div class="border-bottom" fxLayout="row" fxLayoutAlign="space-between center" fxShow.gt-sm fxHide.lt-sm>
+		<div fxFlex="20" fxLayoutAlign="center space-between" >
+			<div>
+				<a [routerLink]="['']" routerLinkActive="router-link-active">
+					<img class="w-50" src="assets/images/arches-logo_108x108.jpg" alt="">
+				</a>
+			</div>
+		</div>
+		<div fxFlex="70" fxLayoutAlign="center space-between">
+			<h3 class="h3">McDonald's Kiosk</h3>
+		</div>
+		<div  fxFlex="30" fxLayoutAlign="center space-between">
+			<div>
+				<!-- <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+					<mat-icon>search</mat-icon>
+				</button> -->
+				<!-- <button mat-flat-button color="accent">
+					<mat-icon>bookmark</mat-icon> Cart
+				</button> -->
+				<button mat-flat-button color="accent">
+					<mat-icon>home</mat-icon> Checkout
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+<!-- <header class="container-outer" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="center stretch">
+	<div   fxFlex="20">
+		<div  >
+			<a [routerLink]="['']" routerLinkActive="router-link-active">Home</a>
+		</div>
+	</div>
+	<div   fxFlex="80" fxFlexOrder.lt-sm="3">
+		<div  >
+			Search field component goes here
+		</div>
+	</div>
+	<div   fxFlex="20" fxFlexOrder.lt-sm="2">
+		<div  >
+			<a [routerLink]="['/row-examples']" routerLinkActive="router-link-active">Examples</a>
+		</div>
+	</div>
+</header> -->

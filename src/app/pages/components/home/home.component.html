@@ -1,0 +1,26 @@
+<div fxLayout="row" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutAlign="space-evenly center">
+    <div fxFlex="50" fxFlex.xs="40"  fxLayoutAlign.xs="start center">
+        <a class="d-flex justify-content-center" style="cursor: pointer;" (click)="onClick('eat In')">
+            <mat-card class="option-card mat-elevation-z8 ">
+                <img mat-card-image src="../../../../assets/images/rsz_1clipart.png" alt="Photo of a Shiba Inu">
+
+                <mat-card-actions class="">
+                    <button mat-raised-button color="warn" style="width: 100%; height:3rem">EAT IN</button>
+                </mat-card-actions>
+            </mat-card>
+        </a>
+
+    </div>
+    <div fxFlex="50" fxFlex.xs="40" fxLayoutAlign.xs="start start">
+        <a class="d-flex justify-content-center" style="cursor: pointer;"  (click)="onClick('take out')">
+            <mat-card class="option-card mat-elevation-z8">
+                <img mat-card-image src="../../../../assets/images/rsz_takeout.png" alt="Photo of a Shiba Inu">
+
+                <mat-card-actions>
+                    <button mat-raised-button color="warn" style="width: 100%; height:3rem">TAKE OUT</button>
+                </mat-card-actions>
+            </mat-card>
+        </a>
+
+    </div>
+</div>

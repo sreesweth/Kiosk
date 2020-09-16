@@ -1,0 +1,17 @@
+<div class="mat-app-background">
+  <div class="content mat-typography">
+    <aside></aside>
+    <header>
+      <h1 class="mat-display-2">Dashboard</h1>
+      <button mat-fab>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </header>
+    <mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">Dark theme
+    </mat-slide-toggle>
+    <div class="flex-content">
+      <app-tile *ngFor="let tile of tiles">{{ tile }}</app-tile>
+    </div>
+    <aside></aside>
+  </div>
+</div>
